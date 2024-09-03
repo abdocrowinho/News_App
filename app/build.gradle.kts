@@ -1,6 +1,10 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("androidx.navigation.safeargs")
+    alias(libs.plugins.kotlin.parcelize)
+
 }
 
 android {
@@ -8,6 +12,7 @@ android {
         viewBinding = true
         dataBinding = true
     }
+
     namespace = "com.example.newsapp"
     compileSdk = 34
 
@@ -30,6 +35,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +46,11 @@ android {
 }
 
 dependencies {
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation (libs.retrofit2.retrofit)
+    implementation (libs.converter.gson)
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
