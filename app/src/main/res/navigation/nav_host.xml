@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/categorisFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.newsapp.UI.activitis.homeActivity.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/categorisFragment"
+        android:name="com.example.newsapp.UI.Fragments.categorey.CategorisFragment"
+        android:label="CategorisFragment" >
+        <action
+            android:id="@+id/action_categorisFragment_to_newFragment"
+            app:destination="@id/newFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.example.newsapp.UI.Fragments.news.NewFragment"
+        android:label="fragment_new"
+        tools:layout="@layout/fragment_new" >
+
+        <argument
+            android:name="category"
+            app:argType="com.example.newsapp.UI.Fragments.categorey.CategoryModel" />
+    </fragment>
+</navigation>
