@@ -2,7 +2,7 @@
 <resources>
     <style name="Them.AppNews.splash" parent="Base.Theme.NewsApp">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.NewsApp</item>
 
     </style>

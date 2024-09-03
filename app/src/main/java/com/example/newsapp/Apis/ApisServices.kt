@@ -13,5 +13,9 @@ interface ApisServices {
         @Query("category") category: String
     ): Call<ResourcesResponse>
     @GET ("/v2/everything")
-    fun getArticles():Call<ArticlesResponse>
+
+    fun getArticles(
+        @Query("apiKey") apiKey: String? = "6fb75de9f46b4ac4b5cf7a25bce48546",
+        @Query("category") sources: String
+    ):Call<ArticlesResponse>
 }
